@@ -1,0 +1,25 @@
+{
+    "name": "conanlight",
+    "displayName": "conanLight",
+    "description": "Bring syntax highlighting to your conan file ",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "conanfile",
+            "aliases": ["conanfile", "conanfile"],
+            "extensions": [".txt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "conanfile",
+            "scopeName": "conanfile.txt",
+            "path": "./syntaxes/conanfile.tmLanguage.json"
+        }]
+    }
+}
