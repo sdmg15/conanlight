@@ -1,5 +1,7 @@
 # conanlight README
 
+[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
+
 Conanlight is a syntax highlighter for conanfile. Conanfile is used to manage dependencies for C/C++ projects.
 
 Check it out in the extensions store here https://bit.ly/2xpJtg8
