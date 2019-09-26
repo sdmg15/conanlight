@@ -4,25 +4,25 @@
     "displayName": "conanLight",
     "description": "Bring syntax highlighting to your conan file ",
     "author": {
-	"name": "Sonkeng Maldini"
-	},
+        "name": "Sonkeng Maldini"
+    },
 
-    "version": "0.0.1",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.35.0"
     },
     "categories": [
         "Programming Languages"
     ],
-  "repository": {
-   	"type":"git",
-	"url": "https://github.com/sdmg15/conanlight/"
-   },
-  "license": "SEE LICENSE IN LICENSE.txt",
-  "bugs": {
-  	   "url": "https://github.com/sdmg15/conanlight/issues",
-    	   "email": "sdmg15@pm.me"
-  	},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sdmg15/conanlight/"
+    },
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "bugs": {
+        "url": "https://github.com/sdmg15/conanlight/issues",
+        "email": "sdmg15@pm.me"
+    },
     "contributes": {
         "languages": [{
             "id": "conanfile",
