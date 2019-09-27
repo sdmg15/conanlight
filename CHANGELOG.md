@@ -1,9 +1,14 @@
-# Change Log
-
-All notable changes to the "conanlight" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
 
 - Initial release
+
+## [1.0.0] - 27 Feb 2019
+
+### Added
+- Fully support for SemVer packages
+
+### Updated
+- Colors of elements
+
+### Deprecated 
+- Not supporting hightlight for non SemVer Packages

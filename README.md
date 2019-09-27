@@ -16,5 +16,8 @@ Highlight file with the name `conanfile.txt`
 
 Initial release of conanlight
 
+### 1.0.0
+
+See CHANGELOG.md
 
 **Enjoy!**
