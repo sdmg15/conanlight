@@ -1,48 +1,65 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "conanfile",
-    "patterns": [{
-            "include": "#keywords"
-        },
-        {
-            "include": "#strings"
-        }
-    ],
-    "repository": {
-        "keywords": {
-            "patterns": [{
+    "patterns": [{"include": "#expression"}],
 
-                    "match": "([a-zA-Z0-9_-]+)/([0-9]{1,}\\.?(?:[0-9]*)\\.?(?:[0-9]*))@([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)",
+    "repository": {
+        "expression": {
+            "patterns": [{"include": "#semver"},{"include": "#comments"},{"include": "#keywords"}]
+        },
+
+        "semver":{
+            "patterns": [
+                {
+                    "match": "^([a-zA-Z0-9_-]+)/(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?@([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$",
                     "captures": {
-                        "1": {
-                            "name": "support.type.property-name.conanfile"
+                        "1":{
+							"name":"markup.heading.conanfile"
+						},
+                        "2":{
+							"name": "markup.deleted.conanfile"
+						},
+						"3":{
+                            "name": "markup.changed.conanfile"
+						},
+						"4":{
+							"name": "meta.tag.conanfile"
+						},
+						"5":{
+							"name":"markup.underline.link.conanfile"
                         },
-                        "2": {
-                            "name": "string.quoted.double.conanfile"
+                        "6":{
+                            "name":"markup.underline.link.conanfile"
                         },
-                        "3": {
-                            "name": "constant.regex.conanfile"
+                        "7":{
+                            "name":"support.constant.conanfile"
                         },
-                        "4": {
-                            "name": "constant.regex.conanfile"
+                        "8":{
+                            "name":"support.constant.conanfile"
                         }
                     }
-                },
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
                 {
+                    "name": "keyword.control.conanfile",
+                    "match": "\\b(requires|generators|build_requires|options|imports|)\\b"
+                }
+            ]
+        },
 
+        "comments": {
+            "patterns": [
+                {
                     "match": "(?:.*)?(#.*)",
                     "captures": {
                         "1": {
                             "name": "comment.conanfile"
                         }
                     }
-                },
-                {
-                    "name": "keyword.control.conanfile",
-                    "match": "\\b(requires|generators|build_requires|options|imports|)\\b"
                 }
-
-
             ]
         },
 
