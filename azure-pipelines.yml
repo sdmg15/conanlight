@@ -16,8 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    npm run build
-    npm install -g vsce
-    vsce publish -p gsoavwimppnhjxpugqfhf5orlmidvzzpzud72y32yd73ydflh6sa
-  displayName: 'npm install and build'
+    npm install vsce
+    vsce publish -p $KEYSTORE
+  displayName: 'install vsce and publish'
