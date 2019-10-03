@@ -45,7 +45,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.conanfile",
-                    "match": "\\b(requires|generators|build_requires|options|imports|)\\b"
+                    "match": "\\b(requires|generators|build_requires|options|imports|True|False)\\b"
                 }
             ]
         },
