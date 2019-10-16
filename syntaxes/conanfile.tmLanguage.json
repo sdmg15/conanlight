@@ -5,7 +5,7 @@
 
     "repository": {
         "expression": {
-            "patterns": [{"include": "#semver"},{"include": "#comments"},{"include": "#keywords"}]
+            "patterns": [{"include": "#semver"},{"include": "#comments"},{"include": "#keywords"},{"include":"#verranges"}]
         },
 
         "semver":{
@@ -40,6 +40,26 @@
                     }
                 }
             ]
+        },
+
+        "verranges":{
+            "patterns": [{
+                "match": "^([a-zA-Z0-9_-]+)/\\[(.*)]@([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$",
+                "captures": {
+                    "1":{
+                        "name":"markup.heading.conanfile"
+                    },
+                    "2":{
+                        "name":"variable.parameter"
+                    },
+                    "3":{
+                        "name":"support.constant.conanfile"
+                    },
+                    "4":{
+                        "name":"support.constant.conanfile"
+                    }
+                }
+            }]
         },
         "keywords": {
             "patterns": [
