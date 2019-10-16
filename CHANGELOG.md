@@ -2,7 +2,7 @@
 
 - Initial release
 
-## [1.0.0] - 27 Feb 2019
+## [1.0.0] - 2019-02-27
 
 ### Added
 - Fully support for SemVer packages
@@ -12,3 +12,8 @@
 
 ### Deprecated 
 - Not supporting hightlight for non SemVer Packages
+
+## [1.1.0] - 2019-10-16
+
+### Added 
+  - Support for conan version ranges 
