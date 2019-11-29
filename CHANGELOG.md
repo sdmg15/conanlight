@@ -11,7 +11,7 @@
 - Colors of elements
 
 ### Deprecated 
-- Not supporting hightlight for non SemVer Packages
+- Not supporting highlight for non SemVer Packages
 
 ## [1.1.0] - 2019-10-16
 
