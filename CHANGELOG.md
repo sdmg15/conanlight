@@ -17,3 +17,8 @@
 
 ### Added 
   - Support for conan version ranges 
+
+## [1.3.0] - 2020-1-10
+
+### Added 
+  - Support for dependencies that don't have channels
