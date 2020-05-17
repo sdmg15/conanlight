@@ -1,0 +1,21 @@
+on:
+    release:
+      types: [created]               # set this to the node version to use
+  jobs:
+    build-and-deploy:
+      name: Build and Deploy
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: npm install, build, and test
+        run: |
+          # Build and test the project, then
+          # deploy to Azure Web App.
+          npm install -g 
+          npm install -g vsce
+          vsce publish -p $(KEYSTORE) 
+  
