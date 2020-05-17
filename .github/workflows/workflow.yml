@@ -14,6 +14,5 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: npm install, build, and test
       run: | 
-        npm install -g 
-        npm install -g vsce
+        sudo npm install -g vsce
         vsce publish -p ${{ secrets.KEYSTORE }}
