@@ -1,6 +1,6 @@
-on:
-    release:
-      types: [created]               # set this to the node version to use
+name: Build and deploy to vscode extension store
+
+on: [push]            # set this to the node version to use
   jobs:
     build-and-deploy:
       name: Build and Deploy
@@ -12,10 +12,8 @@ on:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: npm install, build, and test
-        run: |
-          # Build and test the project, then
-          # deploy to Azure Web App.
+        run: | 
           npm install -g 
           npm install -g vsce
-          vsce publish -p $(KEYSTORE) 
+          vsce publish -p ${{ secrets.KEYSTORE }}
   
