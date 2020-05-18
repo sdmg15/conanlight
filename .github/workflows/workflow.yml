@@ -1,6 +1,9 @@
 name: Build and deploy to vscode extension store
 
-on: [push]            # set this to the node version to use
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
