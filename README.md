@@ -1,6 +1,6 @@
 # conanlight README
 
-<img src="images/logo.svg" width="200" height="100">
+<img src="images/logo.png" width="200" height="100">
 
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 
